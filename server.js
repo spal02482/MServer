@@ -65,16 +65,16 @@ app.post('/user', async function(req,res) {
 app.post('/upload', function(req, res) {
 	console.log(req.body);
 	var uploadfile = "upload/" + req.body.upload_file;
-	var key = "suraj/" + req.body.upload_file;
+	var key = req.body.name + "/" + req.body.upload_file;
 	console.log(uploadfile + " " + key);
-	/*fs.readFile(uploadfile, (err,data) => {
+	fs.readFile(uploadfile, (err,data) => {
 		var params = { Bucket : 'spal02482', Key : key, Body : data }
 		s3.putObject( params, (err, data) => { 
 			if(err) throw err;
 			else console.log("data successfully sent");
 			console.log(data);
 		});
-	});*/
+	});
 	console.log("sent");
 	res.sendStatus(200);
 	res.end();

@@ -10,12 +10,12 @@
 	<h3 name="numberOfFiles" style="display:none"><%=files.length%></h3>
 </head>
 <body>
-	<p><b><i>Hello Suraj</i></b></p>
-	<%for (file in files) {%>
-	<p id="file-download-<%=file%>"><%=files[file].filename%></p>
-	<button id="<%=file%>" type="button" class="btn btn-info"> Download </button><br>
-	<%}%>
+	<p><b><i>Hello <%=name%></i></b></p>
+	<!--<%for (file in files) {%>
+	<input type="button" name="btn-download-" + >
+	<%}%>-->
 	<input id="upload_file" type="file" name="upload_file" multiple> <br> <br>
-	<button id="btn-upload" type="submit" class="btn btn-info"> Upload </button>
+	<button id="btn-upload" type="submit" class="btn btn-info"> Upload </button> <br>
+	<button id="logout" class="btn btn-info">Logout</button>
 </body>
 </html>
