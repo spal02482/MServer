@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User's Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="/js/scripts.js"></script>
+	<h3 name="name" style="display:none"><%=name%></h3>
+	<h3 name="numberOfFiles" style="display:none"><%=files.length%></h3>
+</head>
+<body>
+	<p><b><i>Hello Suraj</i></b></p>
+	<%for (file in files) {%>
+	<p id="file-download-<%=file%>"><%=files[file].filename%></p>
+	<button id="<%=file%>" type="button" class="btn btn-info"> Download </button><br>
+	<%}%>
+	<input id="upload_file" type="file" name="upload_file" multiple> <br> <br>
+	<button id="btn-upload" type="submit" class="btn btn-info"> Upload </button>
+</body>
+</html>
