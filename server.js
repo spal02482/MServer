@@ -4,10 +4,10 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 
 
-const { Client } = require('pg')
+/*const { Client } = require('pg')
 var connString = 'postgres://postgres:postgres@mserver.cmbxoqpanhp8.ap-southeast-1.rds.amazonaws.com:5432/mserver'
 const client = new Client(connString)
-client.connect();
+client.connect();*/
 
 
 const app = express();
